@@ -21,6 +21,9 @@ public class InputManager : MonoBehaviour
         attack = GetComponent<PlayerAttack>();
         
         AssignInputs();
+
+        //Lock cursor when clicking so it doesn't move
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void AssignInputs()

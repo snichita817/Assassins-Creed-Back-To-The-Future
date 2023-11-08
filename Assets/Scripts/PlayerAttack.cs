@@ -42,11 +42,6 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void Update() 
-    {
-
-    }
-
     void ResetAttack()
     {
         attacking = false;
@@ -68,17 +63,15 @@ public class PlayerAttack : MonoBehaviour
 
     void HitTarget(Vector3 pos)
     {
-        // audioSource.pitch = 1;
-        // AudioSource.PlayOneShot(hitSound);
+        //Create a collision volume to detect attack range
+        GameObject collisionVolume = new GameObject("CollisionVolume");
+        collisionVolume.transform.position = pos;
 
-        GameObject GO = Instantiate(attackEffect, pos, Quaternion.identity);
-        Destroy(GO, 20);
+        //Add a SphereCollider to the GameObject
+        SphereCollider sphereCollider = collisionVolume.AddComponent<SphereCollider>();
+        sphereCollider.radius = 0.75f;
+        //isTrigger true so it allows collision detection but you can pass through the collider
+        sphereCollider.isTrigger = true;
+        Destroy(collisionVolume, .1f);
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
 }

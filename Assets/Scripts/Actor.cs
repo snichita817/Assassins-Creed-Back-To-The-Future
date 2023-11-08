@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
+    [SerializeField]
     int currentHealth;
     public int maxHealth;
 
