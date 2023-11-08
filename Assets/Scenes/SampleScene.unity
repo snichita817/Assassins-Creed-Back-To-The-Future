@@ -507,7 +507,6 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 128
-  attackEffect: {fileID: 0}
 --- !u!1 &987110537
 GameObject:
   m_ObjectHideFlags: 0

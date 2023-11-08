@@ -12,7 +12,6 @@ public class PlayerAttack : MonoBehaviour
     public int attackDamage = 1;
 
     public LayerMask attackLayer;
-    public GameObject attackEffect;
 
     // need to find audio files first
     // public AudioClip attackSwing;
@@ -69,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
 
         //Add a SphereCollider to the GameObject
         SphereCollider sphereCollider = collisionVolume.AddComponent<SphereCollider>();
-        sphereCollider.radius = 0.75f;
+        sphereCollider.radius = attackRange;
         //isTrigger true so it allows collision detection but you can pass through the collider
         sphereCollider.isTrigger = true;
         Destroy(collisionVolume, .1f);
