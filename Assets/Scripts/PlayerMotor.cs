@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMotor : MonoBehaviour
 {
@@ -26,8 +25,6 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         isGrounded = controller.isGrounded;
-
-
 
         if(lerpCrouch)
         {
@@ -65,6 +62,7 @@ public class PlayerMotor : MonoBehaviour
             playerVelocity.y = -2f;
         }
         controller.Move(playerVelocity * Time.deltaTime);
+        Debug.Log("Force applied to player " + playerVelocity.y);
     }
 
     public void Jump()
