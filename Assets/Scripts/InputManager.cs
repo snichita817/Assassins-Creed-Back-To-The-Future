@@ -9,19 +9,31 @@ public class InputManager : MonoBehaviour
     private InputActions.OnFootActions onFoot;
     private PlayerMotor motor;
     private PlayerLook look;
-
+    private PlayerAttack attack;
     void Awake() 
     {
         playerInput = new InputActions();
         onFoot = playerInput.OnFoot;
 
+        // Inputs used in the game
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        attack = GetComponent<PlayerAttack>();
+        
+        AssignInputs();
 
+        //Lock cursor when clicking so it doesn't move
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void AssignInputs()
+    {
         onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.Crouch.performed += ctx => motor.Crouch();
         onFoot.Sprint.performed += ctx => motor.Sprint();
+        onFoot.Attack.performed += ctx => attack.Attack();
     }
+
 
     // Start is called before the first frame update
     void Start()
