@@ -36,7 +36,7 @@ public class PatrolBehavior : StateMachineBehaviour
 
         // Update the player's position continuously
         float distance = Vector3.Distance(animator.transform.position, player.position);
-        Debug.Log(animator.transform.position + " " + player.position + " " + distance);
+       // Debug.Log(animator.transform.position + " " + player.position + " " + distance);
         if (distance < chaseRange)
             animator.SetBool("isChasing", true);
     }
