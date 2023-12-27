@@ -21779,13 +21779,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548634234}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.0000000037252894, z: -0.022452066, w: 0.99974793}
-  m_LocalPosition: {x: 0.548, y: -0.542, z: 0.64}
+  m_LocalRotation: {x: -0, y: -0.000000029802319, z: -0.12714674, w: 0.991884}
+  m_LocalPosition: {x: -0.047, y: -0.753, z: 0.64}
   m_LocalScale: {x: 0.083786786, y: 0.66831, z: 0.07313696}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1410831716}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.609}
 --- !u!136 &1548634236
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21801,7 +21801,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -21816,7 +21816,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548634234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21894,7 +21894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.18
+      value: 7.032
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21936,7 +21936,7 @@ PrefabInstance:
       insertIndex: 4
       addedObject: {fileID: 1733578689}
     - targetCorrespondingSourceObject: {fileID: 1843694699652606609, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
-      insertIndex: -1
+      insertIndex: 5
       addedObject: {fileID: 1733578690}
   m_SourcePrefab: {fileID: 100100000, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
 --- !u!4 &1555082236 stripped
@@ -24509,7 +24509,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -24542,7 +24542,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!4 &1733757145 stripped
 Transform:

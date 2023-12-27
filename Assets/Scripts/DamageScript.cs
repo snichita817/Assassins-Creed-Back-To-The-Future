@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageScript : MonoBehaviour
 {
     public int damageAmount = 10;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision");
         PlayerManager.Damage(damageAmount);    
