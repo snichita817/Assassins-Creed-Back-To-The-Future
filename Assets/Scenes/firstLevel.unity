@@ -21872,6 +21872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
+  damageCooldown: 2
 --- !u!1001 &1550615069
 PrefabInstance:
   m_ObjectHideFlags: 0
