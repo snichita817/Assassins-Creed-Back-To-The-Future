@@ -22,10 +22,10 @@ namespace SlimUI.ModernMenu{
 		public GameObject shadowofftextLINE;
 		public GameObject shadowlowtextLINE;
 		public GameObject shadowhightextLINE;
-		public GameObject aaofftextLINE;
-		public GameObject aa2xtextLINE;
-		public GameObject aa4xtextLINE;
-		public GameObject aa8xtextLINE;
+		public GameObject cbOffText;
+		public GameObject cbDeutText;
+		public GameObject cbProtText;
+		public GameObject cbTriText;
 		public GameObject vsynctext;
 		public GameObject motionblurtext;
 		public GameObject texturelowtextLINE;
@@ -196,6 +196,31 @@ namespace SlimUI.ModernMenu{
 				texturelowtextLINE.gameObject.SetActive(false);
 				texturemedtextLINE.gameObject.SetActive(false);
 				texturehightextLINE.gameObject.SetActive(true);
+			}
+
+			if(PlayerPrefs.GetInt("ColorblindType") == 3){
+				cbDeutText.gameObject.SetActive(false);
+				cbTriText.gameObject.SetActive(true);
+				cbProtText.gameObject.SetActive(false);
+				cbOffText.gameObject.SetActive(false);
+			}
+			else if(PlayerPrefs.GetInt("ColorblindType") == 1){
+				cbDeutText.gameObject.SetActive(false);
+				cbTriText.gameObject.SetActive(false);
+				cbProtText.gameObject.SetActive(true);
+				cbOffText.gameObject.SetActive(false);
+			}
+			else if(PlayerPrefs.GetInt("ColorblindType") == 2){
+				cbDeutText.gameObject.SetActive(true);
+				cbTriText.gameObject.SetActive(false);
+				cbProtText.gameObject.SetActive(false);
+				cbOffText.gameObject.SetActive(false);
+			}
+			else{
+				cbDeutText.gameObject.SetActive(false);
+				cbTriText.gameObject.SetActive(false);
+				cbProtText.gameObject.SetActive(false);
+				cbOffText.gameObject.SetActive(true);
 			}
 		}
 
@@ -428,5 +453,39 @@ namespace SlimUI.ModernMenu{
 			texturemedtextLINE.gameObject.SetActive(false);
 			texturehightextLINE.gameObject.SetActive(true);
 		}
+
+		public void ColorBlindOff(){
+			PlayerPrefs.SetInt("ColorblindType", 0);
+			cbDeutText.gameObject.SetActive(false);
+			cbTriText.gameObject.SetActive(false);
+			cbProtText.gameObject.SetActive(false);
+			cbOffText.gameObject.SetActive(true);
+
+		}
+		public void ColorBlinDeut(){
+			PlayerPrefs.SetInt("ColorblindType", 2);
+			cbDeutText.gameObject.SetActive(true);
+			cbTriText.gameObject.SetActive(false);
+			cbProtText.gameObject.SetActive(false);
+			cbOffText.gameObject.SetActive(false);
+
+		}
+		public void ColorBlindProt(){
+			PlayerPrefs.SetInt("ColorblindType", 1);
+			cbDeutText.gameObject.SetActive(false);
+			cbTriText.gameObject.SetActive(false);
+			cbProtText.gameObject.SetActive(true);
+			cbOffText.gameObject.SetActive(false);
+
+		}
+		public void ColorBlindTri(){
+			PlayerPrefs.SetInt("ColorblindType", 3);
+			cbDeutText.gameObject.SetActive(false);
+			cbTriText.gameObject.SetActive(true);
+			cbProtText.gameObject.SetActive(false);
+			cbOffText.gameObject.SetActive(false);
+
+		}
+
 	}
 }
