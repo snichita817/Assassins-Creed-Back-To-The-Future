@@ -30,8 +30,12 @@ namespace Wilberforce
 		// initialization method
         void Start()
         {
-			// if shader is not set, try to find it first
-            if (colorblindShader == null) colorblindShader = Shader.Find("Hidden/Wilberforce/Colorblind");
+            // if shader is not set, try to find it first
+            if (colorblindShader == null || Type != 0)
+            {
+                colorblindShader = Shader.Find("Hidden/Wilberforce/Colorblind");
+                return;
+            }
 
 			// shader wasn't found 
             if (colorblindShader == null)
@@ -90,7 +94,7 @@ namespace Wilberforce
             if (!ColorblindMaterial && colorblindShader.isSupported)
             {
 				// create the material object around the shader program
-                ColorblindMaterial = CreateMaterial(colorblindShader);
+                if (Type != 0) ColorblindMaterial = CreateMaterial(colorblindShader);
             }
 
             if (!colorblindShader.isSupported)
