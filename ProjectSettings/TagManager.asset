@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Points
   - Route
+  - Route2
   layers:
   - Default
   - TransparentFX

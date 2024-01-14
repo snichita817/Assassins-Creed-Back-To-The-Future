@@ -50,6 +50,20 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-7234980126271319346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4cbe4e72c7a524481b949e68472b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
+  patrolTimer: 17
 --- !u!1102 &-6981575544007753237
 AnimatorState:
   serializedVersion: 6
@@ -80,20 +94,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-6340121821746490093
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20b1f9f9daee48e4eb147c1e5fddfbf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 
-  patrolTimer: 10
 --- !u!1101 &-6186647914291321192
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -259,7 +259,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyAnimatorController
+  m_Name: EnemyAnimatorController2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isPatrolling
@@ -319,7 +319,7 @@ AnimatorState:
   - {fileID: -5733618043103035232}
   - {fileID: 8397078129180110586}
   m_StateMachineBehaviours:
-  - {fileID: -6340121821746490093}
+  - {fileID: -7234980126271319346}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

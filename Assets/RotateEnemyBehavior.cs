@@ -15,7 +15,6 @@ public class RotateEnemyBehavior : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(animator.transform.position, player.transform.position);
         if (animator.GetBool("isAttacking"))
         {
             Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - enemy.transform.position);

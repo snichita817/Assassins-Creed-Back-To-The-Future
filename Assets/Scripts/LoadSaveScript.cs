@@ -6,16 +6,18 @@ using BayatGames.SaveGameFree;
 public class LoadSaveScript : MonoBehaviour
 {
     public GameObject Player;
+    public int kills;
     float PlayerX, PlayerY, PlayerZ;
     bool start = true;
 
     void Start()
     {
+        SaveGame.Clear();
         StartCoroutine(DisableInputManagerThenAutoSave());
 
-        PlayerX = SaveGame.Load<float>("PlayerX", -6f);
+        PlayerX = SaveGame.Load<float>("PlayerX", -11f);
         PlayerY = SaveGame.Load<float>("PlayerY", 2f);
-        PlayerZ = SaveGame.Load<float>("PlayerZ", -105f);
+        PlayerZ = SaveGame.Load<float>("PlayerZ", -83f);
 
         Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
         //Debug.Log("Load Player Position: " + PlayerX + ", " + PlayerY + ", " + PlayerZ);

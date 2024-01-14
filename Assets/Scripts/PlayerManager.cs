@@ -41,4 +41,8 @@ public class PlayerManager : MonoBehaviour
             gameOver = true;
         }
     }
+    public static void HealMax()
+    {
+        playerHealth = 100;
+    }
 }
