@@ -1990,6 +1990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9918716f9d07c640888922a75ffb3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1701163417}
+  portal: {fileID: 1875366140}
+  otherPortal: {fileID: 151044026}
 --- !u!20 &109372720
 Camera:
   m_ObjectHideFlags: 0
@@ -4609,6 +4612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1a26f243407df4f9320ab9757fee14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1733578698}
+  reciever: {fileID: 1875366140}
 --- !u!65 &277165622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22550,6 +22555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6748c10a0f1086b40a12cbaa55df427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!4 &1415116780
 Transform:
   m_ObjectHideFlags: 0
@@ -23187,6 +23193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9918716f9d07c640888922a75ffb3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1701163417}
+  portal: {fileID: 151044026}
+  otherPortal: {fileID: 1875366140}
 --- !u!20 &1456099521
 Camera:
   m_ObjectHideFlags: 0
@@ -27417,6 +27426,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorblindScript: {fileID: 1550615070}
+--- !u!4 &1701163417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6463775682595856688, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
+  m_PrefabInstance: {fileID: 1550615069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1702301595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1675079169142442, guid: ffbc74fb0bbcfde41861fd2317cf65e7, type: 3}
@@ -27955,6 +27969,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
+--- !u!4 &1733578698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
+  m_PrefabInstance: {fileID: 1550615069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1733757145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: aa96ce52eb2d0044d84a31cafbdd5bec, type: 3}
@@ -29115,6 +29134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1a26f243407df4f9320ab9757fee14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1733578698}
+  reciever: {fileID: 151044026}
 --- !u!65 &1806663584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36189,6 +36210,6 @@ SceneRoots:
   - {fileID: 1465819862}
   - {fileID: 1415116780}
   - {fileID: 1875366140}
+  - {fileID: 151044026}
   - {fileID: 1456099522}
   - {fileID: 109372721}
-  - {fileID: 151044026}
