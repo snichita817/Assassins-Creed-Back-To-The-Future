@@ -21761,6 +21761,7 @@ GameObject:
   - component: {fileID: 375657225}
   - component: {fileID: 375657228}
   - component: {fileID: 1417772499}
+  - component: {fileID: 1417772500}
   m_Layer: 7
   m_Name: TT_RTS_Demo_Character
   m_TagString: Untagged
@@ -22797,6 +22798,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: -0.0019240379}
+--- !u!114 &1417772500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410338804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df418f603ce96834bb57e7268bb35400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1410338804}
+  player: {fileID: 1733578680}
 --- !u!1 &1418088945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1259544212071048, guid: e0bdb26ae5b35e247aa29e160391211b, type: 3}
@@ -24999,7 +25014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.61
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25007,7 +25022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.032
+      value: -105
       objectReference: {fileID: 0}
     - target: {fileID: 4407904093141241198, guid: 8f4016e4b1a723244a22f5c1b2904895, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36772,7 +36787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &7785168754059441449
 MeshFilter:
   m_ObjectHideFlags: 0

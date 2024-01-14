@@ -13,9 +13,9 @@ public class LoadSaveScript : MonoBehaviour
     {
         StartCoroutine(DisableInputManagerThenAutoSave());
 
-        PlayerX = SaveGame.Load<float>("PlayerX", 42f);
-        PlayerY = SaveGame.Load<float>("PlayerY", 1.5f);
-        PlayerZ = SaveGame.Load<float>("PlayerZ", 0f);
+        PlayerX = SaveGame.Load<float>("PlayerX", -6f);
+        PlayerY = SaveGame.Load<float>("PlayerY", 2f);
+        PlayerZ = SaveGame.Load<float>("PlayerZ", -105f);
 
         Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
         Debug.Log("Load Player Position: " + PlayerX + ", " + PlayerY + ", " + PlayerZ);

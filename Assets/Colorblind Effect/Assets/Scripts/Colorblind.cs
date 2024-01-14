@@ -34,6 +34,8 @@ namespace Wilberforce
             if (colorblindShader == null || Type != 0)
             {
                 colorblindShader = Shader.Find("Hidden/Wilberforce/Colorblind");
+            } else if (Type == 0)
+            {
                 return;
             }
 

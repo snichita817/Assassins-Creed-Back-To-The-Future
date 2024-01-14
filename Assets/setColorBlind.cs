@@ -12,7 +12,10 @@ public class NextSceneScript : MonoBehaviour
         {
             // Retrieve the colorblind type from PlayerPrefs
             int colorblindType = PlayerPrefs.GetInt("ColorblindType");
-
+            if (colorblindType == 0)
+            {
+                return;
+            }
             // Set the colorblind type in the Colorblind script
             if (colorblindScript != null)
             {
