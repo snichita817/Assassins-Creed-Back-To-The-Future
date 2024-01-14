@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
     {
         // update the player health
         playerHealthText.text = "" + playerHealth;
-        Debug.Log("Player Health: " + playerHealth);
+        //Debug.Log("Player Health: " + playerHealth);
         if(gameOver)
         {
             // after player death load this particular scene

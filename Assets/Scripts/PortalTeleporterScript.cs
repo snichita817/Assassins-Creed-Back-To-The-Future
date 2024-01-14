@@ -41,7 +41,7 @@ public class PortalTeleporterScript : MonoBehaviour
         if (inputManager != null)
         {
             inputManager.enabled = true;
-            Debug.Log("A");
+            //Debug.Log("A");
         }
     }
 

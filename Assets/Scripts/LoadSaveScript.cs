@@ -18,7 +18,7 @@ public class LoadSaveScript : MonoBehaviour
         PlayerZ = SaveGame.Load<float>("PlayerZ", -105f);
 
         Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
-        Debug.Log("Load Player Position: " + PlayerX + ", " + PlayerY + ", " + PlayerZ);
+        //Debug.Log("Load Player Position: " + PlayerX + ", " + PlayerY + ", " + PlayerZ);
     }
 
     IEnumerator DisableInputManagerThenAutoSave()
