@@ -39,7 +39,7 @@ public class LoadSaveScript : MonoBehaviour
         if (SaveGame.Load<bool>("reset", false) == true)
         {
             SaveGame.Save<bool>("reset", false);
-
+            SaveGame.Clear();
             PlayerX = -11f;
             PlayerY = 2f;
             PlayerZ = -83f;
@@ -108,8 +108,6 @@ public class LoadSaveScript : MonoBehaviour
         SaveGame.Save<float>("PlayerY", playerY);
         SaveGame.Save<float>("PlayerZ", playerZ);
         SaveGame.Save<float>("kills", kills);
-
-        Debug.Log("Saved Player Position: " + playerX + ", " + playerY + ", " + playerZ);
     }
 
 }
