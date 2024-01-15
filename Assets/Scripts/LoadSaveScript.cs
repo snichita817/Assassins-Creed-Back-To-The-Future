@@ -36,7 +36,6 @@ public class LoadSaveScript : MonoBehaviour
         portal01.transform.position = new Vector3(portal01X, portal01Y, portal01Z);
         portal02.transform.position = new Vector3(portal02X, portal02Y, portal02Z);
 
-        /*
         if (SaveGame.Load<bool>("reset", false) == true)
         {
             SaveGame.Save<bool>("reset", false);
@@ -46,8 +45,16 @@ public class LoadSaveScript : MonoBehaviour
             PlayerZ = -83f;
             kills = 0;
             Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
+
+            portal01X = 37.6f;
+            portal01Y = 2.75f;
+            portal01Z = 19.99f;
+            portal02X = -5f;
+            portal02Y = 2.75f;
+            portal02Z = -114f;
+            portal01.transform.position = new Vector3(portal01X, portal01Y, portal01Z);
+            portal02.transform.position = new Vector3(portal02X, portal02Y, portal02Z);
         }
-        */
     }
 
     IEnumerator DisableInputManagerThenAutoSave()
