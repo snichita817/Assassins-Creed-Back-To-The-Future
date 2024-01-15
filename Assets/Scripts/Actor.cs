@@ -33,6 +33,9 @@ public class Actor : MonoBehaviour
         if (SaveLoader.GetComponent<LoadSaveScript>().kills == 2)
         {
             Portal02.transform.position = new Vector3(-61.5f, 3.18f, 280.1f);
+        } else if (SaveLoader.GetComponent<LoadSaveScript>().kills == 7)
+        {
+            Portal02.transform.position = new Vector3(-120f, 26f, -31f);
         }
     }
 }
