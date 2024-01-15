@@ -11,6 +11,7 @@ public class LoadSaveScript : MonoBehaviour
     bool start = true;
     public GameObject portal01, portal02;
     public PlayerManager PlayerManager;
+    public bool end = false;
 
     public void StartC()
     {
@@ -100,14 +101,17 @@ public class LoadSaveScript : MonoBehaviour
 
     public void SavePlayerPositionData()
     {
-        float playerX = Player.transform.position.x;
-        float playerY = Player.transform.position.y;
-        float playerZ = Player.transform.position.z;
+        if (end == false)
+        {
+            float playerX = Player.transform.position.x;
+            float playerY = Player.transform.position.y;
+            float playerZ = Player.transform.position.z;
 
-        SaveGame.Save<float>("PlayerX", playerX);
-        SaveGame.Save<float>("PlayerY", playerY);
-        SaveGame.Save<float>("PlayerZ", playerZ);
-        SaveGame.Save<float>("kills", kills);
+            SaveGame.Save<float>("PlayerX", playerX);
+            SaveGame.Save<float>("PlayerY", playerY);
+            SaveGame.Save<float>("PlayerZ", playerZ);
+            SaveGame.Save<float>("kills", kills);
+        }
     }
 
 }
