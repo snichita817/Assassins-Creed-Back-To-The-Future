@@ -25,10 +25,17 @@ public class PlayerManager : MonoBehaviour
         // update the player health
         playerHealthText.text = "" + playerHealth;
         //Debug.Log("Player Health: " + playerHealth);
-        if(gameOver)
+        if (gameOver)
         {
             // after player death load this particular scene
             SceneManager.LoadScene("firstLevel");
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SaveGame.Save<bool>("reset", true);
+            SaveGame.Clear();
+            Debug.Log("CLEARED");
         }
     }
 

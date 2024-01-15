@@ -49,7 +49,7 @@ public class NPCController : MonoBehaviour
                 SaveGame.Save<float>("kills", SaveLoader.GetComponent<LoadSaveScript>().kills);
             } else if (name == "npc8")
             {
-                SaveGame.Save<bool>("reset", false);
+                SaveGame.Save<bool>("reset", true);
                 SaveGame.Clear();
                 SaveLoader.GetComponent<LoadSaveScript>().end = true;
             }
