@@ -40922,6 +40922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1733578698}
   VideoPlayer: {fileID: 2078483688}
+  SaveLoader: {fileID: 1415116778}
 --- !u!1 &1542830186
 GameObject:
   m_ObjectHideFlags: 0

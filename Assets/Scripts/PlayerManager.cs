@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
             // after player death load this particular scene
             SceneManager.LoadScene("firstLevel");
         }
+        Debug.Log("Loaded Player Position: " + SaveGame.Load<float>("PlayerX", -11f) + ", " + SaveGame.Load<float>("PlayerY", 2f) + ", " + SaveGame.Load<float>("PlayerZ", -83f));
     }
 
     public static void Damage(int damageAmount)

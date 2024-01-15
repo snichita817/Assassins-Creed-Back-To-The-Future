@@ -13,6 +13,7 @@ public class AdjustRawImageSize : MonoBehaviour
     public GameObject VideoPlayer;
     private InputManager inputManager;
     private GameObject background;
+    public GameObject SaveLoader;
 
     void Start()
     {
@@ -89,18 +90,20 @@ public class AdjustRawImageSize : MonoBehaviour
 
     private void SetInactive()
     {
-        gameObject.SetActive(false);
-        VideoPlayer.SetActive(false);
         if (inputManager == null)
         {
             inputManager = player.GetComponent<InputManager>();
         }
-        inputManager.enabled = true;
+        //inputManager.enabled = true;
+        SaveLoader.GetComponent<LoadSaveScript>().StartC();
+
         if (background != null)
         {
             Destroy(background);
         }
 
         SaveGame.Save<bool>("cutscene", true);
+        VideoPlayer.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

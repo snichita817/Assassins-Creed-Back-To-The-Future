@@ -12,10 +12,13 @@ public class LoadSaveScript : MonoBehaviour
     public GameObject portal01, portal02;
     public PlayerManager PlayerManager;
 
-    void Start()
+    public void StartC()
     {
         StartCoroutine(DisableInputManagerThenAutoSave());
+    }
 
+    void Start()
+    {
         PlayerX = SaveGame.Load<float>("PlayerX", -11f);
         PlayerY = SaveGame.Load<float>("PlayerY", 2f);
         PlayerZ = SaveGame.Load<float>("PlayerZ", -83f);
@@ -24,14 +27,27 @@ public class LoadSaveScript : MonoBehaviour
         Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
         //Debug.Log("Load Player Position: " + PlayerX + ", " + PlayerY + ", " + PlayerZ);
 
-        float portal01X = SaveGame.Load<float>("portal01X", portal01.transform.position.x);
-        float portal01Y = SaveGame.Load<float>("portal01Y", portal01.transform.position.y);
-        float portal01Z = SaveGame.Load<float>("portal01Z", portal01.transform.position.z);
-        float portal02X = SaveGame.Load<float>("portal02X", portal02.transform.position.x);
-        float portal02Y = SaveGame.Load<float>("portal02Y", portal02.transform.position.y);
-        float portal02Z = SaveGame.Load<float>("portal02Z", portal02.transform.position.z);
+        float portal01X = SaveGame.Load<float>("portal01X", 37.6f);
+        float portal01Y = SaveGame.Load<float>("portal01Y", 2.75f);
+        float portal01Z = SaveGame.Load<float>("portal01Z", 19.99f);
+        float portal02X = SaveGame.Load<float>("portal02X", -5f);
+        float portal02Y = SaveGame.Load<float>("portal02Y", 2.75f);
+        float portal02Z = SaveGame.Load<float>("portal02Z", -114f);
         portal01.transform.position = new Vector3(portal01X, portal01Y, portal01Z);
         portal02.transform.position = new Vector3(portal02X, portal02Y, portal02Z);
+
+        /*
+        if (SaveGame.Load<bool>("reset", false) == true)
+        {
+            SaveGame.Save<bool>("reset", false);
+
+            PlayerX = -11f;
+            PlayerY = 2f;
+            PlayerZ = -83f;
+            kills = 0;
+            Player.transform.position = new Vector3(PlayerX, PlayerY, PlayerZ);
+        }
+        */
     }
 
     IEnumerator DisableInputManagerThenAutoSave()
@@ -50,7 +66,7 @@ public class LoadSaveScript : MonoBehaviour
         }
     }
 
-    IEnumerator AutoSave()
+    public IEnumerator AutoSave()
     {
         InputManager inputManager = Player.GetComponent<InputManager>();
         while (true)
@@ -62,7 +78,7 @@ public class LoadSaveScript : MonoBehaviour
                 yield return new WaitForSeconds(.1f);
             } else
             {
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(.2f);
             }
 
             

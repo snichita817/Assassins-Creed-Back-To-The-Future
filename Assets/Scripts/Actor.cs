@@ -35,8 +35,6 @@ public class Actor : MonoBehaviour
         // Death function
         // TEMPORARY: Destroy Object
         ++SaveLoader.GetComponent<LoadSaveScript>().kills;
-        Destroy(gameObject);
-        SaveLoader.GetComponent<LoadSaveScript>().SavePlayerPositionData();
 
         SaveGame.Save<bool>("actor" + index, false);
 
@@ -68,5 +66,8 @@ public class Actor : MonoBehaviour
         SaveGame.Save<float>("portal02Z", portal02Z);
 
         SaveGame.Save<int>("playerHealth", PlayerManager.getHP());
+
+
+        Destroy(gameObject);
     }
 }

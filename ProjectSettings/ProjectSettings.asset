@@ -834,7 +834,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -854,11 +860,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: f993287b-f82e-48c1-a09b-f19066acec15
+  cloudProjectId: d0313c71-e20e-4adc-8c1a-aaa2f74eb4b4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: ACBackToTheFuture
-  organizationId: rasky817
+  organizationId: hexnut_studios
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

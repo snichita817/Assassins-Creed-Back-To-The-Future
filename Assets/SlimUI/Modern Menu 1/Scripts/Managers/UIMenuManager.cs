@@ -97,6 +97,7 @@ namespace SlimUI.ModernMenu
 		public void ClearData()
 		{
             SaveGame.Clear();
+            SaveGame.Save<bool>("reset", true);
         }
 
 		public void PlayCampaign()
