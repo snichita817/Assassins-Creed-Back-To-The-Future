@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PatrolBehavior : StateMachineBehaviour
 {
+    public string index = "";
     public int patrolTimer;
     float timer;
     List<Transform> points = new List<Transform>();
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
 
     Transform player;
     float chaseRange = 10;
@@ -15,11 +16,11 @@ public class PatrolBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0;
-        Transform pointsObject = GameObject.FindGameObjectWithTag("Route").transform;
+        Transform pointsObject = GameObject.FindGameObjectWithTag("Route" + index).transform;
         foreach (Transform t in pointsObject)
             points.Add(t);
 
-        agent = animator.GetComponent<NavMeshAgent>();
+        agent = animator.GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.SetDestination(points[0].position);
 
         // Initialize the player variable, but don't rely on it for up-to-date position
@@ -37,7 +38,7 @@ public class PatrolBehavior : StateMachineBehaviour
 
         // Update the player's position continuously
         float distance = Vector3.Distance(animator.transform.position, player.position);
-       // Debug.Log(animator.transform.position + " " + player.position + " " + distance);
+        // Debug.Log(animator.transform.position + " " + player.position + " " + distance);
         if (distance < chaseRange)
             animator.SetBool("isChasing", true);
     }

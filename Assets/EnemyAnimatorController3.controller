@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b1f9f9daee48e4eb147c1e5fddfbf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
-  patrolTimer: 17
+  index: 3
+  patrolTimer: 7
 --- !u!1101 &-6186647914291321192
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -259,7 +259,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyAnimatorController2
+  m_Name: EnemyAnimatorController3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isPatrolling
