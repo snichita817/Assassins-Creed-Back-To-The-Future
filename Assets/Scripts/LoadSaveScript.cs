@@ -14,7 +14,6 @@ public class LoadSaveScript : MonoBehaviour
 
     void Start()
     {
-        //SaveGame.Clear();
         StartCoroutine(DisableInputManagerThenAutoSave());
 
         PlayerX = SaveGame.Load<float>("PlayerX", -11f);

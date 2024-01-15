@@ -24,6 +24,9 @@ public class InputManager : MonoBehaviour
 
         //Lock cursor when clicking so it doesn't move
         Cursor.lockState = CursorLockMode.Locked;
+
+        int screenWidth = Screen.width;
+        int screenHeight = Screen.height;
     }
 
     void AssignInputs()
