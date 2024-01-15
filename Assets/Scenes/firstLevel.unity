@@ -9952,7 +9952,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 0
+  PlayerManager: {fileID: 1937192196}
 --- !u!195 &375657228
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11865,7 +11867,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 1
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &460847186
 Animator:
   serializedVersion: 5
@@ -16272,7 +16276,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 2
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &615139974
 Animator:
   serializedVersion: 5
@@ -20424,7 +20430,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 7
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &797053047
 Animator:
   serializedVersion: 5
@@ -21825,7 +21833,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 5
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &852597902
 Animator:
   serializedVersion: 5
@@ -35752,7 +35762,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 9
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1390706434
 Animator:
   serializedVersion: 5
@@ -37867,8 +37879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1733578680}
   kills: 0
-  portal01: {fileID: 0}
-  portal02: {fileID: 0}
+  portal01: {fileID: 1875366139}
+  portal02: {fileID: 151044025}
+  PlayerManager: {fileID: 1937192196}
 --- !u!4 &1415116780
 Transform:
   m_ObjectHideFlags: 0
@@ -43483,7 +43496,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 4
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1618202517
 Animator:
   serializedVersion: 5
@@ -47972,7 +47987,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 10
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1768410866
 Animator:
   serializedVersion: 5
@@ -51726,7 +51743,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 3
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1905955376
 Animator:
   serializedVersion: 5
@@ -53085,7 +53104,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 6
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1939633423
 Animator:
   serializedVersion: 5
@@ -54580,7 +54601,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 1415116778}
   portal01: {fileID: 1875366139}
   portal02: {fileID: 151044025}
+  player: {fileID: 0}
   index: 8
+  PlayerManager: {fileID: 1937192196}
 --- !u!95 &1977373559
 Animator:
   serializedVersion: 5
@@ -60147,7 +60170,9 @@ MonoBehaviour:
   SaveLoader: {fileID: 0}
   portal01: {fileID: 0}
   portal02: {fileID: 0}
+  player: {fileID: 0}
   index: 0
+  PlayerManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

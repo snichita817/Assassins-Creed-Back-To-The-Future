@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using BayatGames.SaveGameFree;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = 100;
+        playerHealth = SaveGame.Load<int>("playerHealth", 100);
         gameOver = false;
     }
 
@@ -44,5 +45,15 @@ public class PlayerManager : MonoBehaviour
     public static void HealMax()
     {
         playerHealth = 100;
+    }
+
+    public static void setHP(int health)
+    {
+        playerHealth = health;
+    }
+
+    public static int getHP()
+    {
+        return playerHealth;
     }
 }

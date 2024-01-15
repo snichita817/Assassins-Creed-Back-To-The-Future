@@ -8,8 +8,9 @@ public class Actor : MonoBehaviour
     [SerializeField]
     int currentHealth;
     public int maxHealth;
-    public GameObject SaveLoader, portal01, portal02;
+    public GameObject SaveLoader, portal01, portal02, player;
     public int index;
+    public PlayerManager PlayerManager;
 
     void Awake()
     {
@@ -65,5 +66,7 @@ public class Actor : MonoBehaviour
         SaveGame.Save<float>("portal02X", portal02X);
         SaveGame.Save<float>("portal02Y", portal02Y);
         SaveGame.Save<float>("portal02Z", portal02Z);
+
+        SaveGame.Save<int>("playerHealth", PlayerManager.getHP());
     }
 }

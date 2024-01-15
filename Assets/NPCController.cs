@@ -23,9 +23,13 @@ public class NPCController : MonoBehaviour
             if (name == "npc4" || name == "npc6")
             {
                 PlayerManager.HealMax();
+                SaveGame.Save<int>("playerHealth", 100);
                 if (name == "npc4")
                 {
-                    SaveLoader.GetComponent<LoadSaveScript>().kills = 3;
+                    if (SaveLoader.GetComponent<LoadSaveScript>().kills == 2)
+                    {
+                        SaveLoader.GetComponent<LoadSaveScript>().kills = 3;
+                    }
                     portal01.transform.position = new Vector3(-94f, 2.75f, 196f);
 
                     float portal01X = portal01.transform.position.x;
@@ -37,8 +41,12 @@ public class NPCController : MonoBehaviour
                     SaveGame.Save<float>("portal01Z", portal01Z);
                 } else
                 {
-                    SaveLoader.GetComponent<LoadSaveScript>().kills = 8;
+                    if (SaveLoader.GetComponent<LoadSaveScript>().kills == 7)
+                    {
+                        SaveLoader.GetComponent<LoadSaveScript>().kills = 8;
+                    }
                 }
+                SaveGame.Save<float>("kills", SaveLoader.GetComponent<LoadSaveScript>().kills);
             }
         }
     }

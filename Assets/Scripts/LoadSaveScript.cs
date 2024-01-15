@@ -10,6 +10,7 @@ public class LoadSaveScript : MonoBehaviour
     float PlayerX, PlayerY, PlayerZ;
     bool start = true;
     public GameObject portal01, portal02;
+    public PlayerManager PlayerManager;
 
     void Start()
     {

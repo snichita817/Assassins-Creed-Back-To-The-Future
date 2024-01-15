@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using BayatGames.SaveGameFree;
 
 namespace SlimUI.ModernMenu
 {
@@ -92,6 +93,11 @@ namespace SlimUI.ModernMenu
 			firstMenu.SetActive(true);
 			mainMenu.SetActive(true);
 		}
+
+		public void ClearData()
+		{
+            SaveGame.Clear();
+        }
 
 		public void PlayCampaign()
 		{
