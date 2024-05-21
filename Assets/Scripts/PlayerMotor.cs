@@ -11,7 +11,7 @@ public class PlayerMotor : MonoBehaviour
     private bool isGrounded;
     private bool crouching = false; // Variable to track whether the player is crouching
     private bool lerpCrouch = false; // Variable to control the crouching animation
-    private bool sprinting = false;
+    public bool sprinting = false;
     private float crouchTimer = 0f;
     public float speed = 5f;
     public float gravity = -9.8f;

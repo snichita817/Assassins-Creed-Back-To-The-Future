@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public float attackRange = 3f;
     public float attackDelay = 0.3f;
-    public float attackSpeed = 1f;
+    public float attackSpeed = 1.9f;
     public int attackDamage = 1;
 
     public LayerMask attackLayer;
@@ -17,14 +16,14 @@ public class PlayerAttack : MonoBehaviour
     // public AudioClip attackSwing;
     // public AudioClip hitSound;
 
-    bool attacking = false;
+    public bool attacking = false;
     bool readyToAttack = true;
     int attackCount;
 
     public void Attack()
     {
         Debug.Log("Attack");
-        if(!readyToAttack || attacking) return;
+        if (!readyToAttack || attacking) return;
 
         readyToAttack = false;
         attacking = true;
@@ -32,11 +31,12 @@ public class PlayerAttack : MonoBehaviour
         Invoke(nameof(ResetAttack), attackSpeed);
         Invoke(nameof(AttackRaycast), attackDelay);
 
-        if(attackCount == 0)
+        if (attackCount == 0)
         {
             attackCount++;
         }
-        else{
+        else
+        {
             attackCount = 0;
         }
     }
@@ -50,10 +50,11 @@ public class PlayerAttack : MonoBehaviour
     void AttackRaycast()
     {
         Camera cam = GetComponent<PlayerLook>().cam;
-        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackRange, attackLayer)){
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackRange, attackLayer))
+        {
             HitTarget(hit.point);
 
-            if(hit.transform.TryGetComponent<Actor>(out Actor Target))
+            if (hit.transform.TryGetComponent<Actor>(out Actor Target))
             {
                 Target.TakeDamage(attackDamage);
             }

@@ -14,6 +14,7 @@ public class AdjustRawImageSize : MonoBehaviour
     private InputManager inputManager;
     private GameObject background;
     public GameObject SaveLoader;
+    public GameObject AttackAnimation;
 
     void Start()
     {
@@ -90,6 +91,7 @@ public class AdjustRawImageSize : MonoBehaviour
 
     private void SetInactive()
     {
+        AttackAnimation.SetActive(true);
         if (inputManager == null)
         {
             inputManager = player.GetComponent<InputManager>();

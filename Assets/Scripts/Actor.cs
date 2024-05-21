@@ -38,7 +38,10 @@ public class Actor : MonoBehaviour
 
         SaveGame.Save<bool>("actor" + index, false);
 
-        if (SaveLoader.GetComponent<LoadSaveScript>().kills == 2)
+        if (SaveLoader.GetComponent<LoadSaveScript>().kills == 1)
+        {
+            portal02.GetComponent<MoveBackAndForth>().enabled = false;
+        } else if (SaveLoader.GetComponent<LoadSaveScript>().kills == 2)
         {
             portal02.transform.position = new Vector3(-61.5f, 3.18f, 280.1f);
         } else if (SaveLoader.GetComponent<LoadSaveScript>().kills == 7)
